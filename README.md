@@ -11,7 +11,7 @@ This project is a mobile application developed with Flutter that simulates a the
    - A palette button to cycle between different thermal color palettes.
    - A snapshot button to save the current filtered view to the phone's gallery.
    - A torch/flashlight toggle button in the AppBar for low light assistance.
-4. **Performance**: Optimized mapping utilizing single-array lookups ensuring minimal latency and smooth frame processing.
+4. **Performance**: Optimized mapping utilizing single-array lookups ensuring minimal latency and smooth frame processing. Correctly disposes old frames to avoid memory leaks.
 
 ## Project Structure
 - `lib/main.dart`: Contains the main UI, camera initialization, image stream processing logic, torch toggle, snapshot functionality, and custom drawing.
@@ -44,7 +44,6 @@ This project is a mobile application developed with Flutter that simulates a the
 
 ## Dependencies
 - `camera`: For accessing the device's cameras and streaming frames.
-- `torch_light`: For toggling the device flashlight.
 - `gallery_saver_plus`: For saving screenshots directly to the device gallery.
 - `path_provider`: For accessing temporary directories to stage screenshots.
 - `image`: For image conversions.
